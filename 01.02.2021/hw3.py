@@ -85,19 +85,19 @@
 # a = int(input('Enter number a: '))
 # b = int(input('Enter number b: '))
 
-try:
-    a = int(input('Enter number a: '))
-    b = int(input('Enter number b: '))
-
-    if a > 0 and b > 0:
-        while a != 0 and b != 0:
-            if a > b:
-                a = a % b
-            else:
-                b = b % a
-
-        print('nod: ', a) if a != 0 else print('nod: ', b)
-    else:
-        print('Numbers should be positive')
-except ValueError:
-    print('Invalid literal')
+# try:
+#     a = int(input('Enter number a: '))
+#     b = int(input('Enter number b: '))
+#
+#     if a > 0 and b > 0:
+#         while a != 0 and b != 0:
+#             if a > b:
+#                 a = a % b
+#             else:
+#                 b = b % a
+#
+#         print('nod: ', a) if a != 0 else print('nod: ', b)
+#     else:
+#         print('Numbers should be positive')
+# except ValueError:
+#     print('Invalid literal')
