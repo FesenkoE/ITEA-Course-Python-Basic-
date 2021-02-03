@@ -189,3 +189,28 @@
 #
 #     except ValueError:
 #         print('invalid literal ')
+
+
+"""
+    Пользователь вводит начало и конец числового ряда.
+    Если начало не введено - считать, что это 0.
+    1. Программа считает и выводит на экран сумму числового ряда.
+    2. Произведение не четных чисел числового ряда.
+    * обработать возможные ошибки
+"""
+
+# try:
+#     start = int(input('Enter start: ') or 0)
+#     end = int(input('Enter end: '))
+#     sum_ = 0
+#     prod_of_num = 1
+#
+#     for i in range(start, end):
+#         sum_ += i
+#
+#         if i % 2 != 0:
+#             prod_of_num *= i
+#
+#     print('Sum: ', sum_, '\nProduct of numbers: ', prod_of_num)
+# except ValueError:
+#     print('Start or End are wrong')
