@@ -157,39 +157,31 @@
     5. Если пользователь вводит y, то программа выполняется сначала.
         Иначе - выводит сообщение 'Bye!' и прекращает свою работу.
 """
-# try_again = True
-#
-# while try_again:
-#     try:
-#         n = int(input('Enter a number: '))
-#         op = input('Enter an operation (+, -, *, /): ')
-#         n_numbers = int(input('Enter N of numbers: '))
-#         n_add = n
-#         is_result = True
-#
-#         for i in range(1, n_numbers):
-#             if op == '+':
-#                 n += n_add
-#             elif op == '-':
-#                 n -= n_add
-#             elif op == '*':
-#                 n *= n_add
-#             elif op == '/':
-#                 n /= n_add
-#             else:
-#                 print('You entered wrong operation: ', op)
-#                 is_result = False
-#                 break
-#
-#         if is_result:
-#             print('Result is: ', n)
-#             is_continue = input('Continue? (Y/n): ')
-#             if is_continue == 'n':
-#                 try_again = False
-#
-#     except ValueError:
-#         print('invalid literal ')
 
+n = int(input('Enter number N: '))
+operation = input('Enter an operation (+, -, *, /): ')
+
+i = 0
+result = ''
+
+while i < n:
+    number = int(input('Enter a number: '))
+
+    if result:
+        if operation == '+':
+            result += number
+        elif operation == '-':
+            result -= number
+        elif operation == '*':
+            result *= number
+        elif operation == '/':
+            result /= number
+    else:
+        result = number
+
+    i += 1
+
+print('Result: ', result)
 
 """
     Пользователь вводит начало и конец числового ряда.
