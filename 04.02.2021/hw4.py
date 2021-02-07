@@ -126,3 +126,50 @@
 #
 #         print(phone)
 #         break
+
+"""
+ 1. Изменить строку таким образом, чтоб вместо ', ' был пробел ' '
+    Результат: 'Lorem Ipsum is simply dummy text of the printing industry.'
+
+
+ 2. Найти индекс самой последней буквы 's' в строке.
+    Результат: 53
+
+
+ 3. Найти количество букв 'i' в строке (регистр не имеет значения).
+    Результат: 6
+
+
+ 4. Найти и вывести срез строки.
+    Результат: 'simply dummy text'
+    (используйте методы find или index для получения индексов)
+
+
+ 5. Продублируйте первую половину строки 3 раза и склейте с второй половиной
+    и выведите на экран.
+    Результат: 'Lorem Ipsum is simply dummy tLorem Ipsum is simply dummy tLorem Ipsum is simply dummy text of the printing industry.'
+"""
+
+string = 'Lorem, Ipsum, is, simply, dummy, text, of, the, printing, industry.'
+
+# 1.
+string = string.replace(', ', ' ')
+print(string)
+
+# 2.
+find_index = string.rfind('s')
+print(find_index)
+
+# 3.
+i_count = string.count('i') + string.count('I')
+print(i_count)
+
+# 4.
+find_text = 'simply dummy text'
+find_index = string.find(find_text)
+print(string[find_index:find_index + int(len(find_text))])
+
+# 5.
+first_string_part = string[:len(string) // 2]
+string = first_string_part * 3 + string[len(string) // 2:]
+print(f'Результат: {string}')
