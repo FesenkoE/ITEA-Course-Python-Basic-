@@ -105,24 +105,24 @@
     Если цифр в номере недостаточно, чтобы описать номер в нужном формате -
         попросить пользователя повторить ввод.
 """
-digits = 0
-
-while True:
-    phone = input('Enter phone number: ')
-
-    for symbol in phone:
-        if symbol.isdigit():
-            digits += 1
-
-    if 8 < digits < 13:
-        phone = phone.replace(' ', '').replace('-', '').replace('(', '').replace(')', '').replace('+', '')
-
-        if digits == 9:
-            phone = '380' + phone
-        elif digits == 10:
-            phone = '38' + phone
-        elif digits == 11:
-            phone = '3' + phone
-
-        print(phone)
-        break
+# digits = 0
+#
+# while True:
+#     phone = input('Enter phone number: ')
+#
+#     for symbol in phone:
+#         if symbol.isdigit():
+#             digits += 1
+#
+#     if 8 < digits < 13:
+#         phone = phone.replace(' ', '').replace('-', '').replace('(', '').replace(')', '').replace('+', '')
+#
+#         if digits == 9:
+#             phone = '380' + phone
+#         elif digits == 10:
+#             phone = '38' + phone
+#         elif digits == 11:
+#             phone = '3' + phone
+#
+#         print(phone)
+#         break
