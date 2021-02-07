@@ -96,3 +96,33 @@
 #
 # print(f'Исходня строка: {string}\n'
 #       f'Результат: {result}')
+
+
+"""
+    Написать программу, которая принимает номер телефона в любом формате:
+    +38 (050) 12-34-567 или 099 123 -45 67 или 80501234567 или 888 050 123 4567
+    а выводит в формате: 380501234567.
+    Если цифр в номере недостаточно, чтобы описать номер в нужном формате -
+        попросить пользователя повторить ввод.
+"""
+digits = 0
+
+while True:
+    phone = input('Enter phone number: ')
+
+    for symbol in phone:
+        if symbol.isdigit():
+            digits += 1
+
+    if 8 < digits < 13:
+        phone = phone.replace(' ', '').replace('-', '').replace('(', '').replace(')', '').replace('+', '')
+
+        if digits == 9:
+            phone = '380' + phone
+        elif digits == 10:
+            phone = '38' + phone
+        elif digits == 11:
+            phone = '3' + phone
+
+        print(phone)
+        break
