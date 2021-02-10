@@ -105,27 +105,28 @@
     Если цифр в номере недостаточно, чтобы описать номер в нужном формате -
         попросить пользователя повторить ввод.
 """
-# digits = 0
-#
-# while True:
-#     phone = input('Enter phone number: ')
-#
-#     for symbol in phone:
-#         if symbol.isdigit():
-#             digits += 1
-#
-#     if 8 < digits < 13:
-#         phone = phone.replace(' ', '').replace('-', '').replace('(', '').replace(')', '').replace('+', '')
-#
-#         if digits == 9:
-#             phone = '380' + phone
-#         elif digits == 10:
-#             phone = '38' + phone
-#         elif digits == 11:
-#             phone = '3' + phone
-#
-#         print(phone)
-#         break
+digits = 0
+phone_number = ''
+
+while True:
+    phone = input('Enter phone number: ')
+
+    for symbol in phone:
+        if symbol.isdigit():
+            phone_number += symbol
+
+    digits = len(phone_number)
+
+    if 8 < digits < 13:
+        if digits == 9:
+            phone_number = '380' + phone_number
+        elif digits == 10:
+            phone_number = '38' + phone_number
+        elif digits == 11:
+            phone_number = '3' + phone_number
+
+        print(phone_number)
+        break
 
 """
  1. Изменить строку таким образом, чтоб вместо ', ' был пробел ' '
@@ -150,26 +151,26 @@
     Результат: 'Lorem Ipsum is simply dummy tLorem Ipsum is simply dummy tLorem Ipsum is simply dummy text of the printing industry.'
 """
 
-string = 'Lorem, Ipsum, is, simply, dummy, text, of, the, printing, industry.'
+# string = 'Lorem, Ipsum, is, simply, dummy, text, of, the, printing, industry.'
 
 # 1.
-string = string.replace(', ', ' ')
-print(string)
+# string = string.replace(', ', ' ')
+# print(string)
 
 # 2.
-find_index = string.rfind('s')
-print(find_index)
+# find_index = string.rfind('s')
+# print(find_index)
 
 # 3.
-i_count = string.count('i') + string.count('I')
-print(i_count)
+# i_count = string.count('i') + string.count('I')
+# print(i_count)
 
 # 4.
-find_text = 'simply dummy text'
-find_index = string.find(find_text)
-print(string[find_index:find_index + int(len(find_text))])
+# find_text = 'simply dummy text'
+# find_index = string.find(find_text)
+# print(string[find_index:find_index + int(len(find_text))])
 
 # 5.
-first_string_part = string[:len(string) // 2]
-string = first_string_part * 3 + string[len(string) // 2:]
-print(f'Результат: {string}')
+# first_string_part = string[:len(string) // 2]
+# string = first_string_part * 3 + string[len(string) // 2:]
+# print(f'Результат: {string}')
