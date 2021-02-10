@@ -97,8 +97,8 @@ from string import digits, punctuation, ascii_lowercase, ascii_letters, hexdigit
 
 """Обсудить на уроке
 Вопрос - Возвращает не последний результат, а первый
-
 """
+
 
 def main():
     print('1. Сгенерировать простой пароль (только буквы в нижнем регистре, 8 символов)\n'
