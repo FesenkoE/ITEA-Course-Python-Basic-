@@ -30,7 +30,6 @@
     после чего выводит сообщение "Верно, 4!".
 """
 
-#
 # def main():
 #     answer = get_answer()
 #     print(f'Верно, {answer}!')
@@ -51,6 +50,11 @@
 """
 
 
+# def main():
+#     answer = get_answer()
+#     print(f'Верно, {answer}!')
+
+
 # def get_answer():
 #     answer = input('Сколько будет 2 + 2? ')
 #     if answer != '4':
@@ -60,7 +64,6 @@
 #
 #
 # main()
-
 
 # еще один вариант, с параментром функции
 # def get_answer(question='Сколько будет 2 + 2? '):
