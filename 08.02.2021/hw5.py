@@ -141,11 +141,9 @@ def difficult_pwd():
     for char in range(len_pwd):
         pwd += choice(string)
 
-    print(f'Before check: {pwd}')
     if not pwd_checker(pwd):
-        difficult_pwd()
+        return difficult_pwd()
 
-    print(f'Finished result: {pwd}')
     return pwd
 
 
@@ -158,22 +156,16 @@ def pwd_checker(pwd):
     for char in pwd:
         if char in ascii_uppercase:
             upper_letter = True
-            print(f'upper_letter: {char}')
         elif char in ascii_lowercase:
             low_letter = True
-            print(f'low_letter: {char}')
         elif char in digits:
             digit_ = True
-            print(f'digit_: {char}')
         elif char in punctuation:
             special_char = True
-            print(f'special_char: {char}')
 
     if upper_letter and low_letter and digit_ and special_char:
-        print('success')
         return True
 
-    print('Fail')
     return False
 
 
