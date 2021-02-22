@@ -33,7 +33,7 @@ def main():
                 data.append(str(index) + '. ' + phone_number + ' - ' + name.capitalize())
                 index += 1
 
-    with open('edited_phone_book.txt', 'a') as file:
+    with open('files/edited_phone_book.txt', 'a') as file:
         for contact in data:
             file.write(contact + '\n')
 
