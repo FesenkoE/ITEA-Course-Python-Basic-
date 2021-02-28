@@ -17,7 +17,7 @@ def main():
         "Germany": ["Berlin", "Hamburg", "Munich", "Frankfurt"],
     }
 
-    # print(get_country("Berlin"))
+    print(get_country("Berlin"))
     print(grouping_data(data))
 
 
